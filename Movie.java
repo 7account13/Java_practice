@@ -4,6 +4,7 @@ public class Movie{
     double rating;
     boolean romantic;
 
+//Constructor//
     Movie(String m,String g,double r,boolean s){
         this.movie_name=m;
         this.genre=g;

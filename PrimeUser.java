@@ -1,10 +1,11 @@
 
 //encapsulation//
-public class User{
+//inheritance//
+ class User1{
     private String ac_name;
     private int balance;
 
-    User(String n, int b){
+    User1(String n, int b){
         this.ac_name=n;
         this.balance=b;
 
@@ -27,11 +28,27 @@ public class User{
         System.out.println("Account Holder : "+ac_name);
         System.out.println("Balance : "+balance);
     }
-    public static void main(String[] args) {
-        User u=new User("Dinesh",1000);
-       
 
-         u.disp();
-        
+     public static void main(String[] args) {
+     PrimeUser p= new PrimeUser("Dinesh",1000,34);
+     p.disp();
+     p.showPrime();
+  }  
+}
+
+ class PrimeUser extends User1{
+    int cashbackpercent;
+
+    PrimeUser(String ac_name,int balance,int cashbackpercent){
+        super(ac_name,balance);
+        this.cashbackpercent=cashbackpercent;
     }
+
+    void showPrime(){
+        System.out.println("Cashback percent: "+cashbackpercent+"%");
+    }
+    
+
+       
+   
 }
